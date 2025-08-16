@@ -1,0 +1,7 @@
+scenarios:
+  - name: "ReqRes users"
+    flow:
+      - get:
+          url: "/api/users?page=2"
+          expect:
+            - statusCode: 200
