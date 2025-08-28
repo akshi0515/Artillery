@@ -8,9 +8,17 @@ scenarios:
   - name: "Create User"
     flow:
       - post:
-          url: "/api/users"
+          url: "/users"
           json:
             name: "John Doe"
             job: "Software Engineer"
           expect:
             - statusCode: 201
+
+      - put:
+          url: "/users/2"
+          json:
+            name: "Akshi Jain"
+            job: "Lead Engineer"
+          expect:
+            - statusCode: 200
