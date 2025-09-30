@@ -1,0 +1,12 @@
+config:
+  target: "{{ $processEnvironment.BASE_URL }}"
+
+  phases:
+    - duration: 5
+      arrivalRate: 1
+      name: "Warm-up"
+
+  defaults:
+    headers:
+      Content-Type: application/json
+      x-api-key: "{{ $processEnvironment.API_KEY }}"

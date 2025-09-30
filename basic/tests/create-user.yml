@@ -1,0 +1,11 @@
+scenarios:
+  - name: "Create User"
+    flow:
+      - post:
+          url: "/users"
+          json:
+            name: "John Doe"
+            job: "Software Engineer"
+          expect:
+            - statusCode: 201
+

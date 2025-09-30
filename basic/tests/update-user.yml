@@ -1,0 +1,10 @@
+scenarios:
+  - name: "Create User"
+    flow:
+      - put:
+          url: "/users/2"
+          json:
+            name: "Akshi Jain"
+            job: "Lead Engineer"
+          expect:
+            - statusCode: 200

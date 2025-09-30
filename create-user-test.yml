@@ -1,0 +1,12 @@
+scenarios:
+  - name: "Create user with random data"
+    flow:
+      - post:
+          url: "/api/users"
+          json:
+            name: "{{ faker.name.firstName }}" # random name
+            job: "{{ faker.name.jobTitle }}" # random job title
+          expect:
+            - statusCode: 201
+            - contentType: json
+            - hasProperty: "id" # response must contain "id"

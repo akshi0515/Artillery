@@ -1,0 +1,17 @@
+payload:
+  path: "./datasets/users.csv"
+  fields:
+    - email
+    - password
+
+scenarios:
+  - name: "Login with CSV users"
+    flow:
+      - post:
+          url: "/api/login"
+          json:
+            email: "{{ email }}"
+            password: "{{ password }}"
+          expect:
+            - statusCode: 200
+            - hasProperty: "token" # login must return a token

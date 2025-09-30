@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "dotenv -e .env -- artillery run"
+    "test": "dotenv -e .env -- artillery run --config config/common.yml"
   },
   "keywords": [],
   "author": "",

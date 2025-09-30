@@ -1,0 +1,7 @@
+scenarios:
+  - name: "User CRUD Operations"
+    flow:
+      - delete:
+          url: "/users/2"
+          expect:
+            - statusCode: 204
